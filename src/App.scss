@@ -1,0 +1,16 @@
+@import '@/assets/style/common.scss';
+* {
+  word-break: break-all;
+  min-width: 0;
+  min-height: 0;
+}
+
+body, html {
+  background-color: #f4f6f9 !important;
+  height: auto !important;
+  overflow: auto !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  color: $--juejin-font-2;
+}
+

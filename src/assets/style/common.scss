@@ -1,0 +1,52 @@
+$--juejin-font-1: #252933;
+$--juejin-font-2: #515767;
+$--juejin-font-3: #8a919f;
+$--juejin-font-4: #c2c8d1;
+
+$--juejin-mask-1: rgba(0, 0, 0, 0.4);
+$--juejin-mask-2: #fff;
+
+$--juejin-brand-1-normal: #1e80ff;
+$--juejin-brand-2-hover: #1171ee;
+$--juejin-brand-3-click: #0060dd;
+$--juejin-brand-4-disable: #abcdff;
+$--juejin-brand-5-light: #eaf2ff;
+
+$--juejin-button-shadow-hover: #ddd;
+$--juejin-bot-icon-side-bg-color: linear-gradient(180deg,#ebf1ff,#fff);
+$--juejin-bot-card-border-color: #eaedf1;
+
+$--juejin-gray-0: #fff;
+$--juejin-gray-1-1: #e4e6eb;
+$--juejin-gray-1-2: rgba(228, 230, 235, 0.5);
+$--juejin-gray-1-3: #e4e6eb;
+$--juejin-gray-2: #f2f3f5;
+$--juejin-gray-3: #f7f8fa;
+
+$--juejin-layer-1: #fff;
+$--juejin-layer-2-1: #f7f8fa;
+$--juejin-layer-2-2: rgba(247, 248, 250, 0.7);
+$--juejin-layer-3-fill: #f2f3f5;
+$--juejin-layer-3-border: #e4e6eb;
+$--juejin-layer-4-dropdown: #fff;
+$--juejin-layer-5: #fff;
+
+
+// 单行超省
+@mixin text-ellipsis-single() {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+@mixin text-overflow-multi($lines: 2) {
+  display: -webkit-box; // 将对象作为弹性伸缩盒子模型显示
+  -webkit-box-orient: vertical; // 设置或检索伸缩盒对象的子元素的排列方式
+  -webkit-line-clamp: $lines; // 设置行数
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@mixin width-1220 {
+  width: 1220px;
+  margin: 0 auto;
+}

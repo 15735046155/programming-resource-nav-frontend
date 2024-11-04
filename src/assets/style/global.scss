@@ -1,0 +1,272 @@
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.text-ellipsis-2 {
+  @extend .text-wrap;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.text-wrap {
+  word-break: break-all;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+.text-through {
+  text-decoration: line-through;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+@for $i from 1 through 9 {
+  $x: $i * 100;
+
+  .fw-#{$x} {
+    font-weight: $x;
+  }
+}
+
+.disabled {
+  cursor: not-allowed !important;
+  opacity: 0.5;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.flex-column {
+  @extend .flex;
+  flex-direction: column;
+}
+
+.flex-vcenter {
+  @extend .flex;
+  align-items: center;
+}
+
+.flex-center {
+  @extend .flex-vcenter;
+  justify-content: center;
+}
+
+.flex-between {
+  @extend .flex;
+  justify-content: space-between;
+}
+.flex-around {
+  @extend .flex;
+  justify-content: space-around;
+}
+
+.flex-evenly {
+  @extend .flex;
+  justify-content: space-evenly;
+}
+
+.flex-end {
+  @extend .flex;
+  justify-content: flex-end;
+}
+
+.flex-wrap {
+  @extend .flex;
+  flex-wrap: wrap;
+}
+
+.pointer {
+  cursor: pointer;
+  outline: none;
+}
+
+.helper {
+  cursor: help;
+}
+
+@for $i from 1 through 10 {
+  $x: $i * 2;
+
+  .split-#{$x} > *:not(:last-child) {
+    margin-right: $x + px;
+  }
+}
+
+@for $i from 12 through 30 {
+  .fs-#{$i} {
+    font-size: $i + px !important;
+  }
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+@mixin margin-padding($x) {
+  .mt-#{$x} {
+    margin-top: $x + px !important;
+  }
+
+  .mb-#{$x} {
+    margin-bottom: $x + px !important;
+  }
+
+  .ml-#{$x} {
+    margin-left: $x + px !important;
+  }
+
+  .mr-#{$x} {
+    margin-right: $x + px !important;
+  }
+
+  .mtb-#{$x} {
+    margin-top: $x + px !important;
+    margin-bottom: $x + px !important;
+  }
+
+  .mlr-#{$x} {
+    margin-left: $x + px !important;
+    margin-right: $x + px !important;
+  }
+
+  .pt-#{$x} {
+    padding-top: $x + px !important;
+  }
+
+  .pb-#{$x} {
+    padding-bottom: $x + px !important;
+  }
+
+  .pl-#{$x} {
+    padding-left: $x + px !important;
+  }
+
+  .pr-#{$x} {
+    padding-right: $x + px !important;
+  }
+
+  .ptb-#{$x} {
+    padding-top: $x + px !important;
+    padding-bottom: $x + px !important;
+  }
+
+  .plr-#{$x} {
+    padding-left: $x + px !important;
+    padding-right: $x + px !important;
+  }
+}
+
+@mixin line-height($x) {
+  .lh-#{$x} {
+    line-height: $x + px !important;
+  }
+}
+
+@for $i from 0 through 20 {
+  @include margin-padding($i);
+}
+
+@for $i from 11 through 25 {
+  $x: $i * 2;
+
+  @include margin-padding($x);
+}
+
+@for $i from 0 through 50 {
+  $x: $i * 2;
+
+  @include line-height($i);
+}
+
+.width-full {
+  width: 100% !important;
+}
+
+.height-full {
+  height: 100% !important;
+}
+
+@for $i from 0 through 25 {
+  $x: $i * 25;
+
+  .width-#{$x} {
+    width: $x + px !important;
+  }
+}
+
+@each $key, $val in (
+  "black": black,
+  "333": #333,
+  "666": #666,
+  "999": #999,
+  "white": white,
+) {
+  .fc-gray-#{$key} {
+    color: $val !important;
+  }
+
+  .bg-gray-#{$key} {
+    background-color: $val !important;
+  }
+}
+
+@each $key, $val in (d1d3: #d1d3d8) {
+  .bl-gray-#{$key} {
+    border-left: 1px solid $val !important;
+  }
+
+  .br-gray-#{$key} {
+    border-right: 1px solid $val !important;
+  }
+
+  .bt-gray-#{$key} {
+    border-top: 1px solid $val !important;
+  }
+
+  .bb-gray-#{$key} {
+    border-bottom: 1px solid $val !important;
+  }
+
+  .blr-gray-#{$key} {
+    border-left: 1px solid $val !important;
+    border-right: 1px solid $val !important;
+  }
+
+  .btb-gray-#{$key} {
+    border-top: 1px solid $val !important;
+    border-bottom: 1px solid $val !important;
+  }
+}
+
+@for $i from 0 through 12 {
+  .br-#{$i} {
+    border-radius: $i + px !important;
+  }
+}

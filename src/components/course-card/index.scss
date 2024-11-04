@@ -1,0 +1,75 @@
+@import '@/assets/style/common.scss';
+
+.course-card-components{
+  cursor: pointer;
+  height: 340px;
+  width: 280px;
+  overflow: hidden;
+  background-color: #fff;
+  border-radius: 6px;
+  margin: 0 10px 10px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  .course-card-img{
+    display: block;
+    height: 210px;
+    width: 100%;
+    overflow: hidden;
+    // &:hover{
+    //   display: inline-block;
+    //   height: 100%;
+    //   object-fit: cover;
+    //   transition: all .3s linear;
+    //   width: 100%;
+    // }
+  }
+  .course-card-container{
+    border-left: 1px solid #e9e9e9;
+    border-bottom: 1px solid #e9e9e9;
+    border-right: 1px solid #e9e9e9;
+    border-radius: 0 0 6px 6px;
+    .course-card-title{
+      font-size: 20px;
+      color: $--juejin-font-1;
+      height: 56px;
+    }
+    .course-card-teacher{
+      height: 22px;
+      display: flex;
+      align-items: center;
+      .course-card-teacher-avatar{
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-right: 4px;
+      }
+      .course-card-teacher-name{
+        color: $--juejin-font-2;
+        font-weight: 400;
+        max-width: 70px;
+      }
+      .course-card-teacher-desc{
+        text-overflow: ellipsis;
+        margin-left: 4px;
+        color: $--juejin-font-2;
+      }
+    }
+    .course-card-info{
+      display: flex;
+      color: $--juejin-font-3;
+      .course-card-info-praise{
+      }
+      .course-card-info-people{
+        &::before{
+          width: 6px;
+          text-align: center;
+          content: "·";
+          color: $--juejin-font-3;
+          margin: 0 4px;
+        }
+      }
+    }
+  }
+}

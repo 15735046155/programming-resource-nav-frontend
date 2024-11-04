@@ -1,0 +1,51 @@
+@import '@/assets/style/common.scss';
+
+.article-card-components{
+  cursor: pointer;
+  position: relative;
+  background: $--juejin-layer-1;
+  padding: 12px 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  .article-card-content-wrapper{
+    padding-bottom: 12px;
+    border-bottom: 1px solid $--juejin-gray-1-2;
+    width: 100%;
+    .article-card-container{
+      .article-card-desc, .article-card-teacher-name, .article-card-num{
+        color: $--juejin-font-3;
+        .icon-gengduo2 {
+          display: none;
+        }
+      }
+      .divider{
+        width: 1px;
+        height: 12px;
+        background-color: $--juejin-gray-1-1;
+        margin: 0 12px;
+      }
+      .article-card-info:hover{
+        .icon-gengduo2 {
+          display: block;
+        }
+      }
+      .tag-box{
+
+      }
+    }
+    .article-card-img{
+      display: block;
+      width: 108px;
+      height: 72px;
+      margin-left: 24px;
+      border-radius: 4px;
+      border: 1px solid $--juejin-gray-1-2;
+    }
+  }
+}
+.article-card-components:hover{
+  background: $--juejin-gray-2;
+  transition: all .3s linear;
+}
