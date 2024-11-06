@@ -1,0 +1,33 @@
+@import '@/assets/style/common.scss';
+.article-detail-page{
+  width: 1220px;
+  margin: 0 auto;
+  padding-top: 20px;
+  .article-detail-page-left{
+
+  }
+  .article-detail-page-middle{
+    width: 820px;
+    // background-color: #fff;
+    .article-title{
+      color: $--juejin-font-1;
+    }
+    .author-info-block{
+      .author-name{
+        color: $--juejin-font-2;
+      }
+      .author-time{
+        color: $--juejin-font-3;
+      }
+    }
+    .article-tags{
+      color: $--juejin-font-2;
+    }
+  }
+  .article-detail-page-right{
+    width: 240px;
+    height: 250px;
+    background-color: #fff;
+    margin-left: 20px;
+  }
+}

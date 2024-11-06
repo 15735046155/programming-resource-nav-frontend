@@ -8,7 +8,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 100%;
+
   .article-card-content-wrapper{
     padding-bottom: 12px;
     border-bottom: 1px solid $--juejin-gray-1-2;
@@ -16,8 +16,14 @@
     .article-card-container{
       .article-card-desc, .article-card-teacher-name, .article-card-num{
         color: $--juejin-font-3;
-        .icon-gengduo2 {
+        .icon {
           display: none;
+        }
+      }
+      .article-card-num:hover{
+        color: $--juejin-brand-2-hover;
+        .iconfont-bs{
+          color: $--juejin-brand-2-hover;
         }
       }
       .divider{
@@ -27,7 +33,7 @@
         margin: 0 12px;
       }
       .article-card-info:hover{
-        .icon-gengduo2 {
+        .icon {
           display: block;
         }
       }
@@ -46,6 +52,6 @@
   }
 }
 .article-card-components:hover{
-  background: $--juejin-gray-2;
+  background: $--juejin-gray-3;
   transition: all .3s linear;
 }

@@ -1,0 +1,21 @@
+@import '@/assets/style/common.scss';
+
+.article-rank-container{
+  overflow: hidden;
+  cursor: pointer;
+  .article-rank-header{
+    margin-bottom: 10px;
+    border-bottom: 1px solid $--juejin-gray-1-2;
+    .article-rank-header-more{
+      color: $--juejin-font-3;
+    }
+  }
+  .article-rank-content{
+    .article-rank-item-title{
+      color: $--juejin-font-1;
+      .article-rank-index{
+        color: $--juejin-brand-2-hover;
+      }
+    }
+  }
+}

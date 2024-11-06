@@ -13,7 +13,7 @@ const ArticleDetail = lazy(() => import('@/pages/article-detail'));
 
 // 管理端
 const AdminHome = lazy(() => import('@/pages/admin/home'));
-const WorksList = lazy(() => import('@/pages/admin/works-list'));
+const ExamineList = lazy(() => import('@/pages/admin/examine-list'));
 
 const routes = [
   {
@@ -53,11 +53,19 @@ const routes = [
     ],
   },
   {
-    path: `/article/:id`,
+    path: `/article/:id`, // 用户 - 文章详情
     element: <ArticleDetail />
   },
   {
-    path: '/admin',
+    path: `/my`, // 用户 - 我的
+    element: <My />
+  },
+  {
+    path: `/examine-list`, // 管理 - 审核列表
+    element: <ExamineList />
+  },
+  {
+    path: '/admin', // 管理 - 首页
     element: <AdminHome />,
   }
 ];

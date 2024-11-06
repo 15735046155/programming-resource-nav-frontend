@@ -21,7 +21,7 @@ const CourseCard = ({ courseImg, title, author = {}, praise, people } = {}) => {
         </div>
         <div className="course-card-info fs-12 mt-8">
           <span className="course-card-info-praise">{praise}点赞</span>
-          <span className="course-card-info-people">{people}人已报名</span>
+          <span className="course-card-info-people">{people}人已学习</span>
         </div>
       </div>
     </div>

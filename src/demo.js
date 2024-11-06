@@ -13,6 +13,7 @@ export const articleListData = [
     courseImg: 'https://s.17win.com/snack/115/82c8f027dd714eecbb579397782887c6.jpg',
     praise: 10,
     people: 20,
+    collect: 30,
     commentId: 1,
     tag: ['标签1标签1标签1标签1标签1标签1']
   },
@@ -30,6 +31,7 @@ export const articleListData = [
     courseImg: 'https://s.17win.com/snack/115/82c8f027dd714eecbb579397782887c6.jpg',
     praise: 10,
     people: 20,
+    collect: 30,
     commentId: 2,
     tag: ['标签1', '标签2', '标签3']
   },
@@ -47,6 +49,7 @@ export const articleListData = [
     courseImg: 'https://s.17win.com/snack/115/82c8f027dd714eecbb579397782887c6.jpg',
     praise: 10,
     people: 20,
+    collect: 30,
     commentId: 2,
     tag: ['标签1', '标签2', '标签3']
   },
@@ -64,6 +67,7 @@ export const articleListData = [
     courseImg: 'https://s.17win.com/snack/115/82c8f027dd714eecbb579397782887c6.jpg',
     praise: 10,
     people: 20,
+    collect: 30,
     commentId: 2,
     tag: ['标签1', '标签2', '标签3']
   },
@@ -81,6 +85,7 @@ export const articleListData = [
     courseImg: 'https://s.17win.com/snack/115/82c8f027dd714eecbb579397782887c6.jpg',
     praise: 10,
     people: 20,
+    collect: 30,
     commentId: 1,
     tag: ['标签1']
   },
@@ -98,6 +103,7 @@ export const articleListData = [
     courseImg: 'https://s.17win.com/snack/115/82c8f027dd714eecbb579397782887c6.jpg',
     praise: 10,
     people: 20,
+    collect: 30,
     commentId: 2,
     tag: ['标签1', '标签2', '标签3']
   },
@@ -115,6 +121,7 @@ export const articleListData = [
     courseImg: 'https://s.17win.com/snack/115/82c8f027dd714eecbb579397782887c6.jpg',
     praise: 10,
     people: 20,
+    collect: 30,
     commentId: 2,
     tag: ['标签1', '标签2', '标签3']
   },
@@ -132,6 +139,7 @@ export const articleListData = [
     courseImg: 'https://s.17win.com/snack/115/82c8f027dd714eecbb579397782887c6.jpg',
     praise: 10,
     people: 20,
+    collect: 30,
     commentId: 2,
     tag: ['标签1', '标签2', '标签3']
   }

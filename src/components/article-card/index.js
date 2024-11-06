@@ -1,17 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Tag, Dropdown } from 'antd';
 import { useNavigate } from 'react-router-dom';
 import './index.scss'
+import SvgIcon from '@/components/svg-icon';
+import ReportModal from '@/components/report-modal';
 
 const ArticleCard = (data = {}) => {
-  const { courseImg, title, author = {}, praise, people, content, tag, id} = data;
+  const { courseImg, title, author = {}, praise, people, collect, content, tag, id} = data;
   const { name } = author;
   const navigate = useNavigate();
+  const [reportModalVisible, setReportModalVisible] = useState(false);
+
+  const showModal = () => {
+    setReportModalVisible(true);
+  };
+
+  const onCancel = () => {
+    setReportModalVisible(false);
+  };
+  const onOk = () => {
+    setReportModalVisible(false);
+  };
   const items = [
     {
       key: '1',
       label: (
-        <span onClick={() => console.log('操作:举报')}>
+        <span onClick={(e) => reportArticle(e, '1')}>
           举报
         </span>
       )
@@ -39,6 +53,7 @@ const ArticleCard = (data = {}) => {
     // TODO: 举报操作，掉接口
     switch (key) {
       case '1':
+        showModal();
         console.log('举报操作');
         break;
       case '2':
@@ -73,10 +88,13 @@ const ArticleCard = (data = {}) => {
             <div className="flex-vcenter">
               <span className="article-card-teacher-name fs-13">{name}</span>
               <div className="divider"></div>
-              <span className="article-card-num fs-13 mr-24 flex-vcenter"><i className="iconfont icon-check-line mr-4"></i>{people}</span>
-              <span className="article-card-num fs-13 mr-24 fflex-vcenter"><i className="iconfont icon-dianzan2 mr-4" onClick={giveLike}></i>{praise}</span>
+
+              <span className="article-card-num fs-13 mr-24 flex-vcenter"><SvgIcon iconName="icon-check-line" className="mr-4"></SvgIcon>{people}</span>
+              <span className="article-card-num fs-13 mr-24 flex-vcenter"><SvgIcon iconName="icon-dianzan1" className="mr-4"></SvgIcon>{praise}</span>
+              <span className="article-card-num fs-13 mr-24 flex-vcenter"><SvgIcon iconName="icon-shoucang5" className="mr-4"></SvgIcon>{collect}</span>
+              
               <Dropdown menu={{ items }} placement="bottomLeft" arrow>
-                <span className="article-card-num fs-13 flex-vcenter"><i className="iconfont icon-gengduo2 mr-4"></i></span>
+                <span className="article-card-num fs-13 flex-vcenter"><SvgIcon iconName="icon-gengduo2" className="mr-4 icon"></SvgIcon></span>
               </Dropdown>
             </div>
             <div className="tag-box">
@@ -86,6 +104,12 @@ const ArticleCard = (data = {}) => {
         </div>
         <img src={courseImg} alt="" className="article-card-img" />
       </div>
+      <ReportModal
+        visible={reportModalVisible}
+        onCancel={onCancel}
+        onOk={onOk}
+        id={id}
+      />
     </div>
   );
 };

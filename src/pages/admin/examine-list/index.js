@@ -8,7 +8,7 @@ const WorkList = () => {
   }, []);
 
   return (
-    <div>管理员 - 作品列表页</div>
+    <div>管理员 - 审核列表页</div>
   );
 };
 export default WorkList;
