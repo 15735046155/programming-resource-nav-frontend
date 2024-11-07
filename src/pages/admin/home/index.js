@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { Form, Input, Button, message } from 'antd';
 // import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
+  const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
 
   const onFinish = async (values) => {
@@ -17,6 +19,7 @@ const Login = () => {
       // } else {
       //   message.error(response.data.message || '登录失败，请检查用户名和密码');
       // }
+      navigate('/examine-list');
     } catch (error) {
       message.error('登录失败，请检查网络连接或稍后再试。');
     } finally {
@@ -29,7 +32,8 @@ const Login = () => {
   };
 
   return (
-    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+    <div className="flex-column flex-vcenter flex-center" style={{ height: '100vh' }}>
+      <div className="fc-brand fs-30 mb-50">编程资源系统导航-管理端</div>
       <Form
         name="login_form"
         initialValues={{ remember: true }}
