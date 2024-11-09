@@ -19,7 +19,7 @@ const Login = () => {
       // } else {
       //   message.error(response.data.message || '登录失败，请检查用户名和密码');
       // }
-      navigate('/examine-list');
+      navigate('/admin/examine-list');
     } catch (error) {
       message.error('登录失败，请检查网络连接或稍后再试。');
     } finally {

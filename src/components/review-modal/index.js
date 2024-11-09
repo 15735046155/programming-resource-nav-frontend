@@ -15,7 +15,7 @@ const ReviewModal = ({ visible, title, placeholder, onOk, onCancel }) => {
   return (
     <Modal
       title={title}
-      visible={visible}
+      open={visible}
       onOk={handleOk}
       onCancel={handleCancel}
       okText="确定"

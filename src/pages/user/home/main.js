@@ -1,20 +1,19 @@
 import React, { useState, useEffect } from 'react';
-import { articleListData } from '@/demo';
 
 import CourseCard from '@/components/course-card';
 import ArticleCard from '@/components/article-card';
 import ArticleRank from '@/components/article-rank';
 
-const Main = ({ type }) => {
-  const CardComponent = type === 'video' ? CourseCard : ArticleCard;
+const Main = ({ selectedTags, refresh = () => {}, list = [] }) => {
+  // const CardComponent = selectedTags === 'video' ? CourseCard : ArticleCard;
   return (
     <div className="content-container width-1220">
       {
-        type === 'video' ?
+        selectedTags === 'video' ?
         <React.Fragment>
           {
-            articleListData?.map((item, index) => {
-              return <CourseCard {...item} key={item.id} />
+            list?.map((item, index) => {
+              return <CourseCard key={item.id} {...item} refresh={refresh} />
             })
           }
         </React.Fragment>
@@ -22,8 +21,8 @@ const Main = ({ type }) => {
         <div className="article-box flex">
           <div className="flex-1">
             {
-              articleListData?.map((item, index) => {
-                return <ArticleCard {...item} key={item.id} />
+              list?.map((item, index) => {
+                return <ArticleCard key={item.id} {...item} refresh={refresh} />
               })
             }
           </div>

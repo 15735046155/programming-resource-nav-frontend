@@ -18,7 +18,7 @@ const ReportModal = ({ visible, onCancel, onOk, id }) => {
       try {
         // TODO：调用举报接口，需要帐户id, id
         // await onReport(values);
-        message.success('举报成功！');
+        message.success('举报成功！', values, id);
         form.resetFields(); // 提交成功后重置表单
         onOk(); // 关闭弹窗
       } catch (error) {
@@ -34,12 +34,13 @@ const ReportModal = ({ visible, onCancel, onOk, id }) => {
   return (
     <Modal
       title="用户举报"
-      visible={visible}
+      open={visible}
       onOk={handleOk}
       onCancel={onCancel}
       okText="提交"
       cancelText="取消"
       confirmLoading={loading}
+      maskClosable={false}
     >
       <Form
         form={form}

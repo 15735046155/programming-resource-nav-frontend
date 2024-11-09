@@ -21,6 +21,7 @@ const LoginModal = ({ visible, setLoginModalVisible, onCancel, onOk }) => {
 
   // 关闭登录
   const handleCancel = () => {
+    console.log('关闭登录');
     form.resetFields();
     onCancel();
   };
@@ -44,13 +45,14 @@ const LoginModal = ({ visible, setLoginModalVisible, onCancel, onOk }) => {
     <div>
       <Modal
         open={visible}
-        onOk={handleOk}
         onCancel={handleCancel}
         okText="登录"
         cancelText="取消"
-        closable={false}
         maskClosable={false}
         width={400}
+        footer={null}
+        title="登录"
+        style={{ textAlign: 'center' }}
       >
         <Form form={form} name="login">
           <Form.Item
@@ -82,7 +84,7 @@ const LoginModal = ({ visible, setLoginModalVisible, onCancel, onOk }) => {
           </Form.Item>
 
           <Form.Item>
-            <Button block type="primary" htmlType="submit">
+            <Button block type="primary" onClick={handleOk}>
               登录
             </Button>
             <a href="#" onClick={onRegister}>去注册</a>

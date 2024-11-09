@@ -7,6 +7,8 @@
     height: 70px;
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.04);
+    position: fixed;
+    top: 0;
     .head-contents{
       @include width-1220;
       height: 70px;
@@ -33,7 +35,7 @@
   }
   .content-container{
     @include width-1220;
-    margin-top: 20px;
+    margin-top: 90px;
     display: flex;
     flex-wrap: wrap;
     overflow: hidden;

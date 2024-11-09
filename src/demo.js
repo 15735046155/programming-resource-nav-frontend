@@ -143,4 +143,25 @@ export const articleListData = [
     commentId: 2,
     tag: ['标签1', '标签2', '标签3']
   }
+];
+
+export const followData = [
+  {
+    id: 1,
+    name: "用户1",
+    followStatus: 1,
+    avatar: 'https://s.17win.com/snack/115/1615359264000/user.png',
+  },
+  {
+    id: 2,
+    name: "用户2",
+    followStatus: 0,
+    avatar: 'https://s.17win.com/snack/115/1615359264000/user.png',
+  },
+  {
+    id: 3,
+    name: "用户3",
+    followStatus: 1,
+    avatar: 'https://s.17win.com/snack/115/1615359264000/user.png',
+  },
 ]

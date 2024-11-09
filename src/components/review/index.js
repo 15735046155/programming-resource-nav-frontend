@@ -22,7 +22,7 @@ const Review = () => {
   }
 
   return (
-    <div className="bg-gray-white ptb-20 plr-20 br-4">
+    <div className="bg-gray-white ptb-20 br-4">
       <div className="modules-title fs-28 fw-600 mb-32">评论{list?.length}</div>
       <div>
         <Input.TextArea

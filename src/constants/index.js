@@ -8,3 +8,11 @@ export const reviewer_status_icon = {
   "1": "icon-chenggong",
   "2": "icon-71shibai",
 }
+
+export const sourceTypeTagData = [{
+  key: 'video',
+  value: '视频'
+}, {
+  key: 'text',
+  value: '文章'
+}];

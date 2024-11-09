@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Tabs, Table, Space, Button, Tooltip, Flex, Input, DatePicker, message } from 'antd';
 
-import { reviewer_status, reviewer_status_icon} from '@/contants';
+import { reviewer_status, reviewer_status_icon} from '@/constants';
 import ReviewModal from '@/components/review-modal'; 
 import SvgIcon from '@/components/svg-icon';
 
@@ -46,7 +46,11 @@ const WorkList = () => {
     },
     {
       key: 'audited',
-      label: '已审核',
+      label: '审核成功',
+    },
+    {
+      key: 'failed',
+      label: '审核失败',
     },
   ];
   const [activeKey, setActiveKey] = useState('noAudited'); // 审核/为审核tab

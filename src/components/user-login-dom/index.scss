@@ -1,0 +1,54 @@
+@import '@/assets/style/common.scss';
+.popover-content{
+  // box-shadow: 0 0 24px rgba(81, 87, 103, .16);
+  // border: 1px solid $--juejin-gray-1-1;
+  // border-radius: 4px;
+  // padding: 20px;
+  background-color: #fff;
+  .my-center{
+    border-bottom: 1px solid $--juejin-gray-1-2;
+    padding: 12px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    .user-info-item{
+      width: 74px;
+      height: 40px;
+      cursor: pointer;
+      text-align: center;
+      .collect-num{
+        color: $--juejin-font-1;
+        font-weight: 500;
+        margin-bottom: 4px;
+        font-size: 16px;
+      }
+      .collect-text{
+        color: $--juejin-font-3;
+        font-size: 12px;
+      }
+    }
+  }
+  .handle-box{
+    display: flex;
+    justify-content: space-between;
+    color: $--juejin-font-1;
+    cursor: pointer;
+    background-color: #fff;
+    padding: 12px 0;
+    .handle-item{
+      .handle-text{
+        margin-left: 4px;
+      }
+    }
+  }
+}
+.login-head-img{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-left: 20px;
+}
+:where(.css-dev-only-do-not-override-apn68).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item, :where(.css-dev-only-do-not-override-apn68).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-item, :where(.css-dev-only-do-not-override-apn68).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-submenu-title, :where(.css-dev-only-do-not-override-apn68).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-submenu-title{
+  background-color: #fff !important;
+}

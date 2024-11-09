@@ -1,0 +1,50 @@
+.my-page{
+  
+  .my-page-left{
+    background-color: #fff;
+    padding: 0 20px 20px;
+    border-radius: 4px;
+  }
+  .my-page-right{
+    width: 260px;
+    margin-left: 20px;
+    .user-info{
+      display: flex;
+      flex-direction: column;
+      background-color: #fff;
+      padding: 20px 0;
+      margin-bottom: 20px;
+      .avatar{
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        overflow: hidden;
+        display: block;
+      }
+      .name{
+        color: #000;
+        font-weight: 600;
+        font-size: 20px;
+      }
+      .collect-info{
+        color: #4a68ad;
+        cursor: pointer;
+        font-size: 15px;
+        &::before{
+          content: "+ ";
+        }
+      }
+    }
+    .personal-achievement{
+      background-color: #fff;
+      padding: 10px 0;
+      .item{
+        padding: 10px 20px;
+        border-bottom: 1px solid #eee;
+        &:last-child{
+          border: none;
+        }
+      }
+    }
+  }
+}

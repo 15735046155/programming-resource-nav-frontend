@@ -1,0 +1,38 @@
+@import '@/assets/style/common.scss';
+.container{
+  width: 1220px;
+  margin: 0 auto;
+  margin-top: 90px;
+  border-radius: 4px;
+}
+.head-container{
+  width: 100%;
+  height: 70px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.04);
+  position: fixed;
+  top: 0;
+  background-color: #fff;
+  z-index: 999;
+  .head-contents{
+    @include width-1220;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .head-left{
+      .head-logo{
+        display: block;
+        margin-right: 10px;
+      }
+    }
+    
+    .head-right{
+      display: flex;
+      align-items: center;
+    }
+    .head-login{
+      margin-left: 24px;
+      cursor: pointer;
+    }
+  }
+}

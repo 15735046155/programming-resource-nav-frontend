@@ -1,0 +1,25 @@
+@import '@/assets/style/common.scss';
+.follow-card{
+  width: 100%;
+  cursor: pointer;
+  position: relative;
+  background: $--juejin-layer-1;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  .follow-card-left{
+    .follow-card-left-img{
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      margin-right: 12px;
+    }
+    .follow-card-left-name{
+      font-size: 16px;
+      font-weight: 600;
+      color: $--juejin-font-1;
+    }
+  }
+}
