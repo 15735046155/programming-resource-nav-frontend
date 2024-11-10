@@ -1,13 +1,14 @@
 // 当前组件是课程（视频卡片）
 import React, { useState, useEffect } from 'react';
-
+import { useNavigate } from 'react-router-dom';
 import './index.scss';
 
-const CourseCard = ({ courseImg, title, author = {}, praise, people } = {}) => {
+const CourseCard = ({ id, courseImg, title, author = {}, praise, people } = {}) => {
+  const navigate = useNavigate();
   // const { courseImg, title, teacher = {}, praise, people } = data;
   const { avatar = 'https://s.17win.com/snack/115/1615359264000/user.png', name, desc } = author;
   const gotoCourseDetail = () => {
-    console.log('跳转到详情页');
+    navigate(`/user/course/${id}`);
   }
   return (
     <div className="course-card-components" onClick={gotoCourseDetail}>

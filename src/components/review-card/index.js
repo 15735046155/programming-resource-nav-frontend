@@ -50,7 +50,7 @@ const ReviewCard = (data = {}) => {
             <span className="ml-12 fs-14 time">{time}</span>
           </span>
           <Dropdown menu={{ items }} placement="bottomRight" arrow>
-            <div><SvgIcon iconName="icon-gengduo2" className="mr-4 icon" /></div>
+            <div><SvgIcon iconName="icon-gengduo2" className="mr-4 icon pointer" /></div>
           </Dropdown>
         </div>
         <div className="mt-4 review-content">{content}</div>

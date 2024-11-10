@@ -9,6 +9,7 @@
   flex-direction: column;
   align-items: flex-start;
   width: 100%;
+  box-sizing: border-box;
   .article-card-content-wrapper{
     padding-bottom: 12px;
     border-bottom: 1px solid $--juejin-gray-1-2;

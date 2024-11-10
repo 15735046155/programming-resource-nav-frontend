@@ -9,6 +9,7 @@ const Layout = lazy(() => import('@/pages/user/layout'));
 const Home = lazy(() => import('@/pages/user/home'));
 const My = lazy(() => import('@/pages/user/my'));
 const ArticleDetail = lazy(() => import('@/pages/user/article-detail'));
+const CourseDetail = lazy(() => import('@/pages/user/course-detail'));
 
 // 管理端
 const AdminHome = lazy(() => import('@/pages/admin/home'));
@@ -27,6 +28,10 @@ const routes = [
       {
         path: `article/:id`, // 用户 - 文章详情
         element: <ArticleDetail />
+      },
+      {
+        path: `course/:id`, // 用户 - 课程详情
+        element: <CourseDetail />
       },
       {
         path: `my`, // 用户 - 我的

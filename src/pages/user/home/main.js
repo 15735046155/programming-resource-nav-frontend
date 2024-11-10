@@ -19,7 +19,7 @@ const Main = ({ selectedTags, refresh = () => {}, list = [] }) => {
         </React.Fragment>
         :
         <div className="article-box flex">
-          <div className="flex-1">
+          <div className="article-box-left">
             {
               list?.map((item, index) => {
                 return <ArticleCard key={item.id} {...item} refresh={refresh} />

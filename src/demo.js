@@ -165,3 +165,26 @@ export const followData = [
     avatar: 'https://s.17win.com/snack/115/1615359264000/user.png',
   },
 ]
+
+export const courseCategory = [
+  {
+    id: 1,
+    name: "目录1",
+    url: 'https://bitdash-a.akamaihd.net/content/MI201109210084_1/m3u8s/f08e80da-bf1d-4e3d-8899-f0f6155f6efa.m3u8'
+  },
+  {
+    id: 2,
+    name: "目录2",
+    url: 'https://storage.googleapis.com/media-session/elephants-dream/the-wires.mp3',
+  },
+  {
+    id: 3,
+    name: "目录3",
+    url: 'https://test-videos.co.uk/vids/bigbuckbunny/webm/vp8/360/Big_Buck_Bunny_360_10s_1MB.webm'
+  },
+  {
+    id: 4,
+    name: "目录4",
+    url: 'http://dash.edgesuite.net/envivio/EnvivioDash3/manifest.mpd'
+  },
+]

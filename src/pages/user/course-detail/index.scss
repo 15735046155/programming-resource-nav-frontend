@@ -1,0 +1,47 @@
+@import '@/assets/style/common.scss';
+.course-detail{
+  .course-detail-left{
+    width: 840px;
+    margin-right: 20px;
+    background-color: #fff;
+
+    .course-detail-video-box{
+      width: 100%;
+      height: 480px;
+      background-color: #fff;
+      overflow: hidden;
+    }
+    .course-progress{
+      border-bottom: 1px solid rgb(216, 216, 216);
+    }
+    .teacher-info{
+      border-bottom: 1px solid rgb(216, 216, 216);
+      .teacher-avatar{
+        width: 71px;
+        height: 71px;
+        display: block;
+      }
+    }
+    .course-intro{
+      color: #4e5969;
+      border-bottom: 1px solid rgb(216, 216, 216);
+    }
+  }
+  .course-detail-right{
+    width: 360px;
+    .course-category{
+      background-color: #fff;
+      .title{
+        border-bottom: 1px solid rgb(216, 216, 216);
+      }
+      .course-category-item{
+        padding: 10px 20px;
+        cursor: pointer;
+        color: $--juejin-font-2;
+      }
+      .course-category-item:hover{
+        color: $--juejin-brand-2-hover;
+      }
+    }
+  }
+}

@@ -37,7 +37,7 @@ const ArticleDetail = () => {
           <FloatButton icon={<ShareAltOutlined />} />
         </Tooltip>
       </FloatButton.Group>
-      <div className="article-detail-page-middle flex-1">
+      <div className="article-detail-page-middle flex-1 br-4">
         <div className="bg-gray-white mb-20 ptb-20 br-4">
           <div className="article-title fs-26 fw-600 fc-gray-333 mb-16">文章标题</div>
           <div className="author-info-block flex fs-12 fw-600 fc-gray-333 mb-16">
