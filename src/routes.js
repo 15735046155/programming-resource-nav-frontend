@@ -8,6 +8,7 @@ import { useRoutes } from 'react-router-dom';
 const Layout = lazy(() => import('@/pages/user/layout'));
 const Home = lazy(() => import('@/pages/user/home'));
 const My = lazy(() => import('@/pages/user/my'));
+const PublishCourse = lazy(() => import('@/pages/user/publish-source'));
 const ArticleDetail = lazy(() => import('@/pages/user/article-detail'));
 const CourseDetail = lazy(() => import('@/pages/user/course-detail'));
 
@@ -25,6 +26,10 @@ const routes = [
     path: '/user',
     element: <Layout />,
     children: [
+      {
+        path: `public-course`, // 用户 - 发布文章
+        element: <PublishCourse />
+      },
       {
         path: `article/:id`, // 用户 - 文章详情
         element: <ArticleDetail />
